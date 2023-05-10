@@ -1,0 +1,1028 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/get_role_access": {
+      "get": {
+        "summary": "Get Role Access",
+        "description": "Request a picture path for a given starting image.\nThis url isn't visited directly, but called from a Javascript Ajax call.",
+        "operationId": "get_role_access_get_role_access_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/opportunities": {
+      "get": {
+        "summary": "Opportunities",
+        "description": "Request a picture path for a given starting image.\nThis url isn't visited directly, but called from a Javascript Ajax call.",
+        "operationId": "opportunities_opportunities_get",
+        "parameters": [
+          {
+            "name": "type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Types"
+                }
+              }
+            },
+            "required": true,
+            "in": "query",
+            "description": "Type of model"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Query Text",
+              "type": "string"
+            },
+            "name": "q",
+            "in": "query",
+            "description": "Query to find opportunity or deal id"
+          },
+          {
+            "required": false,
+            "schema": {
+              "title": "Page",
+              "type": "integer"
+            },
+            "name": "p",
+            "in": "query",
+            "description": "Provide Page number, if there are more than 50 records"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "opty_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "opty": {
+                    "summary": "Opportunity Propensity example",
+                    "value": {
+                      "opty_ids": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "riskAssessment": {
+                    "summary": "Risk Assessment example",
+                    "value": {
+                      "opty_ids": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "riskRecommender": {
+                    "summary": "Risk recommender example",
+                    "value": {
+                      "opty_ids": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "nst": {
+                    "summary": "NST example",
+                    "value": {
+                      "NST_groups": [],
+                      "NST_types": [],
+                      "SubRegion": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/default_values_with_optid": {
+      "post": {
+        "summary": "Default Values With Optid",
+        "description": "Request a picture path for a given starting image.\nThis url isn't visited directly, but called from a Javascript Ajax call.",
+        "operationId": "default_values_with_optid_default_values_with_optid_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "object"
+                  }
+                }
+              },
+              "examples": {
+                "opty": {
+                  "summary": "Opportunity Propensity example",
+                  "value": {
+                    "type": "Opportunity Propensity",
+                    "opty_id": "7-3224W6HMTM"
+                  }
+                },
+                "riskAssessment": {
+                  "summary": "Risk Assessment example",
+                  "value": {
+                    "type": "Risk Assessment",
+                    "deal_id": "12975"
+                  }
+                },
+                "riskRecommender": {
+                  "summary": "Risk recommender example",
+                  "value": {
+                    "type": "Risk Recommender",
+                    "deal_id": "342524"
+                  }
+                },
+                "nst": {
+                  "summary": "NST example",
+                  "value": {
+                    "type": "NST",
+                    "NST Type": "Term and Termination",
+                    "NST Group": "Other",
+                    "SubRegion": "United States"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "opty": {
+                    "summary": "Opportunity Propensity example",
+                    "value": {
+                      "opty_rows": [
+                        {
+                          "ACRPotentialRevenue": 0,
+                          "BIF Amount CCUS": 0,
+                          "Discount CCUS": 3159.7869,
+                          "ECIFCommitted": null,
+                          "FeeType": "Time & Materials",
+                          "ItemLevel": "Resource",
+                          "ResourceTier": "Tier 2: Architect",
+                          "Revenue CCUS": 54615.605800000005,
+                          "Risk Reserve CCUS": null,
+                          "Total Resource Hours": 172,
+                          "contract id": 447490,
+                          "id": 1,
+                          "is S500 Flag": "No",
+                          "opportunitycreateddatefiscalyear": "FY22",
+                          "opportunitystatus": "Open",
+                          "opty_id": "7-3224W6HMTM",
+                          "pkg_id": 11854050
+                        },
+                        {
+                          "ACRPotentialRevenue": 0,
+                          "BIF Amount CCUS": 0,
+                          "Discount CCUS": 33987.6572,
+                          "ECIFCommitted": null,
+                          "FeeType": "Time & Materials",
+                          "ItemLevel": "Resource",
+                          "ResourceTier": "Tier 3: Sr PjM/Cons/ADE",
+                          "Revenue CCUS": 335506.135,
+                          "Risk Reserve CCUS": null,
+                          "Total Resource Hours": 1120,
+                          "contract id": 447490,
+                          "id": 2,
+                          "is S500 Flag": "No",
+                          "opportunitycreateddatefiscalyear": "FY22",
+                          "opportunitystatus": "Open",
+                          "opty_id": "7-3224W6HMTM",
+                          "pkg_id": 11854050
+                        }
+                      ]
+                    }
+                  },
+                  "riskAssessment": {
+                    "summary": "Risk Assessment example",
+                    "value": {
+                      "opty_rows": [
+                        {
+                          "# Red Projects": 0,
+                          "Agreement Setup Completed Date": "2018-10-17",
+                          "Amendment Rank": 3,
+                          "Approval Duration": "0-1 days",
+                          "Approval Type": null,
+                          "ApprovalsExceedsTarget": "NO",
+                          "Area": "Germany",
+                          "Business Type": "Consulting",
+                          "BusinessType": null,
+                          "CM Review": "No",
+                          "CSAT": 3,
+                          "CloudFlag": "Other Deal",
+                          "CompassOneIndustryName": "Civilian Government",
+                          "Complex Deal Indicator": "NOT COMPLEX",
+                          "Contract Created Date Fiscal Year": "FY19",
+                          "Contract Duration": "181+ days",
+                          "Contract ID": 229566,
+                          "Contract Id": 229566,
+                          "Contract Revenue Cluster": "Less Than 50K",
+                          "Contract Status Group": "Completed",
+                          "ContractStatus": "Completed",
+                          "Cost Adjustment CCUS": 0,
+                          "Cost Adjustment LOC": 0,
+                          "Cost Adjustment USD": 0,
+                          "Cost_Red_Projects": 0,
+                          "Country": "Germany",
+                          "CustTradeScreenStatusValue": null,
+                          "Custom_perc": 99.99999882142544,
+                          "Deal ID": "12975",
+                          "Deal Id": 12975,
+                          "Deal To Engagement Mapping": "One to One Mapping",
+                          "Deal Type": 5,
+                          "Deal Velocity": 9,
+                          "DealCreatedDate": "2015-08-17",
+                          "DealID": 12975,
+                          "DealId_x": 12975,
+                          "DealId_y": 12975,
+                          "DealOutcome": "Won",
+                          "Default Delivery Margin Target": 0.1642,
+                          "Delivery Margin Target": 0.1644,
+                          "Delivery Type": "To End Customer - MS Prime",
+                          "DeliveryCostServicesLOC": 78329.55,
+                          "DeliveryCostServicesUSD": 87726.10699999999,
+                          "Derived Primary Domain": "Azure Cloud & AI",
+                          "Derived Primary Domain Short Name": "ACA",
+                          "Domain": "Unknown",
+                          "Domain Count": 1,
+                          "Domain Involvement": "Single Domain",
+                          "DomainAlignedPresalesTotalCnsmdHrs": null,
+                          "ESAP": "ESAP5",
+                          "Engagement to Virtuoso Mapping": "One to one Mapping",
+                          "EngagementID": "23E0080C-97E0-486E-9213-236B77498163",
+                          "Environment Risk Rating": "Low",
+                          "Environment Risk Rating Original": "Low",
+                          "Environment Risk Rating QA": "Unknown",
+                          "Federal": "Exclude USA - Federal",
+                          "Fee": "T&M",
+                          "Fee Arrangement": "Time & Materials",
+                          "FeeArrangement": "Time & Materials",
+                          "FinalDeliveryValue": null,
+                          "Geography": "Germany (SalesDistrict)",
+                          "Geography Id": 2613,
+                          "GeographyId": 2613,
+                          "HAS SOW": "Non SOW Contract",
+                          "Has CN Review": "No",
+                          "Has Compass Coverage": 1,
+                          "Has ESWO": 0,
+                          "Has Finance Review": "No",
+                          "Has IP Review": "No",
+                          "Has Known Risks": false,
+                          "Has SQA Review": "No",
+                          "HasSContract": "Yes",
+                          "IndustrySector": "Public",
+                          "Is Additional Risk": 0,
+                          "Is Amendment": true,
+                          "Is Budgetary Estimate": false,
+                          "Is Contract Reviewed": "Yes",
+                          "Is Contract Rushed": "Yes",
+                          "Is ECIF": "No",
+                          "Is IP Exchange": 0,
+                          "Is Misstated": false,
+                          "Is One to One Mapping": "Yes",
+                          "Is Public Sector": "Yes",
+                          "Is Risk Overridden": "No",
+                          "Is SAP Aurora": 0,
+                          "Is Strategic Opportunity": false,
+                          "Is Subcon Identified": false,
+                          "Is Vaguely Described": false,
+                          "IsAzureandA&IDomainDeal": "Yes",
+                          "IsGlobal": false,
+                          "IsRenewal": "No",
+                          "IsSapAurora": null,
+                          "Label": "L",
+                          "MSO TYPE": "No MSO",
+                          "NST Category": "Standard",
+                          "NegotiationsExceedsTarget": "NO",
+                          "ORBApproved": "No",
+                          "OSEDealsFlag": "Deals w/o OSE & no C1 Exception",
+                          "Objective Risk Rating": "Low",
+                          "Opportunity ID": "7-HYBM6CQDN",
+                          "Opportunity Id_x": "7-HYBM6CQDN",
+                          "Opportunity Id_y": "7-HYBM6CQDN",
+                          "OpportunityId_x": null,
+                          "OpportunityId_y": null,
+                          "Organization": "Consulting",
+                          "Outlier Type": "Not an Outlier",
+                          "Output": "L",
+                          "Overall Risk Rating": "Low",
+                          "Overall Risk Rating Original": "Low",
+                          "Overall Risk Rating QA": "Unknown",
+                          "OverallRiskRating-Numeric": 2,
+                          "PL Requested Type": "No PL Requested",
+                          "PM Solution Area": null,
+                          "PPGCategory": "Unknown",
+                          "Payment Terms": "Net 30",
+                          "Planned Contract Microsoft IGD Hours": 0,
+                          "Planned Contract Riskreserve Required CCUS": 0,
+                          "Price To Customer LOC": 0,
+                          "Price To Customer USD": 0,
+                          "Pricing Cut Off": "Approval post Pricing Changes",
+                          "PrimedByDomain": "Azure Cloud & AI",
+                          "Project Id": 5869,
+                          "Project Manager Hours": 0,
+                          "Project Manager Mix": "No project manager",
+                          "Project Risk Rating": "Low",
+                          "Project Risk Rating Original": "Low",
+                          "Project Risk Rating QA": "Unknown",
+                          "Project Status": "Closed",
+                          "ProjectId": 5869,
+                          "ProjectId_x": 5869,
+                          "ProjectId_y": 5869,
+                          "QA_Critical": null,
+                          "QA_Deal_Id": null,
+                          "QA_High": null,
+                          "QA_Low": null,
+                          "QA_Medium": null,
+                          "QA_Unknown": null,
+                          "Red_Cost_PPG": 10.51049273,
+                          "Red_Count_PPG": 4.2253521130000005,
+                          "Red_Projects_SubRegion": 1.565762004,
+                          "Region": "Germany",
+                          "RevenueClusterCRM": null,
+                          "RevenueServicesLOC": 98000,
+                          "RevenueServicesUSD": 109754.7318,
+                          "Risk Profile Rating": 1,
+                          "SBDInvolved": "No",
+                          "SQA Review": "Not Required",
+                          "SSSP Alias": null,
+                          "Score": 0.4918,
+                          "Seller_Red_Cost": 1.390773461,
+                          "Seller_Red_Projects": 5.263157895,
+                          "SolutionExceedsTarget": "YES",
+                          "Standard Offering Type": "Custom",
+                          "SubContractors": "InfoWAN Datenkommunikation GmbH",
+                          "SubRegion": "Germany",
+                          "Sub_Region": "Germany",
+                          "TQA Review": "Not Required",
+                          "TQA_Critical": null,
+                          "TQA_Deal_Id": null,
+                          "TQA_High": null,
+                          "TQA_Low": null,
+                          "TQA_Medium": null,
+                          "Technical Risk Rating": "Low",
+                          "Technical Risk Rating Original": "Low",
+                          "Technical Risk Rating QA": "Unknown",
+                          "ThresholdMRT": "<MRT",
+                          "TimeZone": "EMEA",
+                          "Total Microsoft Hours": 0,
+                          "Total Resource Hours": 0,
+                          "Total SubCon Hours": 0,
+                          "TotalRevenueServicesUSD": 447854.319395,
+                          "Unnamed: 0": 2,
+                          "VelocityExceedsTarget": "NO",
+                          "Work Order Type": "Custom Work Order (Pre-approved)",
+                          "commitmentlevel": 4,
+                          "dealsizerevenuegroup": "300k-500k",
+                          "dealtypederived": 5,
+                          "domaininvolvement": "Single Domain",
+                          "exceptiontype": "Soft",
+                          "feetype": "T&M",
+                          "forecastrecommendation": "Committed",
+                          "id": 1,
+                          "isdeliverytypeflag": "NO",
+                          "isgpo": "No GPO",
+                          "ismcsopportunity": "No",
+                          "opportunityaginggroup": "More than 180 days",
+                          "opportunityid": "7-HYBM6CQDN",
+                          "opportunitysalesstage": "MS Win 100%",
+                          "opportunitysize": "100k-300k",
+                          "opportunitystatus": "Won"
+                        }
+                      ]
+                    }
+                  },
+                  "riskRecommender": {
+                    "summary": "Risk recommender example",
+                    "value": {
+                      "opty_rows": [
+                        {
+                          "AccountIndustryName": "Banking",
+                          "AccountSegmentName": "Major Commercial",
+                          "Agreement Setup Completed Date Fiscal Year": null,
+                          "ApprovalType": null,
+                          "Area": "Greater China",
+                          "BundledPackageName": null,
+                          "Business Type": "Consulting",
+                          "BusinessScenario": "A&AI_.Net",
+                          "CloudFlag": "Other Deal",
+                          "CommitmentLevel": null,
+                          "ComplexDealIndicator": "NOT COMPLEX",
+                          "Contract Completed Date Fiscal Year": "Unknown",
+                          "Contract Status Group": "In Preparation",
+                          "Contract Version": "Base Contract",
+                          "ContractHyperLink": "https://compassone.microsoft.com/Deal/342524/Customer/419050",
+                          "ContractID": 419050,
+                          "Deal ID": "342524",
+                          "DealId": 342524,
+                          "Domain": "Azure Cloud & AI",
+                          "ECIF": 0,
+                          "Estimated Start Date Fiscal Year": "FY22",
+                          "EstimatedDeliveryValueCCUS": 542950.542,
+                          "EstimatedDeliveryValueLOC": 542950.542,
+                          "EstimatedEndDate": "2022-06-30",
+                          "EstimatedStartDate": "2022-02-14",
+                          "FeeType": "Fixed Fee",
+                          "HASSOW": "Non SOW Contract",
+                          "HasCNReview": "No",
+                          "IsGPO": null,
+                          "IsGlobal": false,
+                          "MSAAggrementType": "Microsoft Business and Services Agreement",
+                          "NSTCategory": "Non-Standard",
+                          "OpportunitySize": null,
+                          "Overall Risk Rating Original": "Unknown",
+                          "PPG": "App Dev",
+                          "Package": "Tailored Consulting",
+                          "PackageId": 10643759,
+                          "PackageTitle": "WS1: Project Governance",
+                          "PaymentTerms": "Net 30",
+                          "PlannedPackageDeliveryCostCCUS": 53473.72159999999,
+                          "PlannedPackageDiscountCCUS": 4266.6208,
+                          "PlannedPackageRevenueCCUS": 35921.6,
+                          "PlannedPackageRevenueLOC": 35921.6,
+                          "PresalesApprovedHours": null,
+                          "PresalesFlag": 0,
+                          "PrimaryProductName": "App Innovation_Azure_Apps",
+                          "Resource": "Account Delivery Executive",
+                          "ResourceCategory": "TZ FTE",
+                          "ResourceHours": 208,
+                          "ResourceType": "Account Delivery Executive",
+                          "SBDInvolved": "No",
+                          "SoldMarginCCUS": -17552.1216,
+                          "StandardOfferingType": "Custom",
+                          "TechnicalRiskRating": "Unknown",
+                          "id": 1
+                        }
+                      ]
+                    }
+                  },
+                  "nst": {
+                    "summary": "NST example",
+                    "value": [
+                      {
+                        "counts": 29,
+                        "unique_NST_comments": "standard effect termination language present given nonstandard custom template per tr mbsa"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/output_values_with_optid": {
+      "post": {
+        "summary": "Output Values With Optid",
+        "description": "Request a picture path for a given starting image.\nThis url isn't visited directly, but called from a Javascript Ajax call.",
+        "operationId": "output_values_with_optid_output_values_with_optid_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              },
+              "examples": {
+                "opty": {
+                  "summary": "Opportunity Propensity example",
+                  "value": {
+                    "opty_id": "7-3224W6HMTM",
+                    "type": "Opportunity Propensity",
+                    "data": [
+                      {
+                        "ACRPotentialRevenue": 0,
+                        "BIF Amount CCUS": 0,
+                        "Discount CCUS": 3159.7869,
+                        "ECIFCommitted": null,
+                        "FeeType": "Time & Materials",
+                        "ItemLevel": "Resource",
+                        "ResourceTier": "Tier 4: PjM/Cons/ADE",
+                        "Revenue CCUS": 54615.605800000005,
+                        "Risk Reserve CCUS": null,
+                        "Total Resource Hours": 172,
+                        "contract id": 447490,
+                        "id": 1,
+                        "is S500 Flag": "No",
+                        "opportunitycreateddatefiscalyear": "FY22",
+                        "opportunitystatus": "Open",
+                        "opty_id": "7-3224W6HMTM",
+                        "pkg_id": 11854050
+                      },
+                      {
+                        "ACRPotentialRevenue": 0,
+                        "BIF Amount CCUS": 0,
+                        "Discount CCUS": 33987.6572,
+                        "ECIFCommitted": null,
+                        "FeeType": "Time & Materials",
+                        "ItemLevel": "Resource",
+                        "ResourceTier": "Tier 3: Sr PjM/Cons/ADE",
+                        "Revenue CCUS": 335506.135,
+                        "Risk Reserve CCUS": null,
+                        "Total Resource Hours": 1120,
+                        "contract id": 447490,
+                        "id": 2,
+                        "is S500 Flag": "No",
+                        "opportunitycreateddatefiscalyear": "FY22",
+                        "opportunitystatus": "Open",
+                        "opty_id": "7-3224W6HMTM",
+                        "pkg_id": 11854050
+                      }
+                    ]
+                  }
+                },
+                "riskAssessment": {
+                  "summary": "Risk Assessment example",
+                  "value": {
+                    "opty_id": "12975",
+                    "type": "Risk Assessment",
+                    "data": [
+                      {
+                        "# Red Projects": 0,
+                        "Agreement Setup Completed Date": "2018-10-17",
+                        "Amendment Rank": 3,
+                        "Approval Duration": "0-1 days",
+                        "Approval Type": null,
+                        "ApprovalsExceedsTarget": "NO",
+                        "Area": "Germany",
+                        "Business Type": "Consulting",
+                        "BusinessType": null,
+                        "CM Review": "No",
+                        "CSAT": 3,
+                        "CloudFlag": "Other Deal",
+                        "CompassOneIndustryName": "Civilian Government",
+                        "Complex Deal Indicator": "NOT COMPLEX",
+                        "Contract Created Date Fiscal Year": "FY19",
+                        "Contract Duration": "181+ days",
+                        "Contract ID": 229566,
+                        "Contract Id": 229566,
+                        "Contract Revenue Cluster": "Less Than 50K",
+                        "Contract Status Group": "Completed",
+                        "ContractStatus": "Completed",
+                        "Cost Adjustment CCUS": 0,
+                        "Cost Adjustment LOC": 0,
+                        "Cost Adjustment USD": 0,
+                        "Cost_Red_Projects": 0,
+                        "Country": "Germany",
+                        "CustTradeScreenStatusValue": null,
+                        "Custom_perc": 99.99999882142544,
+                        "Deal ID": "12975",
+                        "Deal Id": 12975,
+                        "Deal To Engagement Mapping": "One to One Mapping",
+                        "Deal Type": 5,
+                        "Deal Velocity": 9,
+                        "DealCreatedDate": "2015-08-17",
+                        "DealID": 12975,
+                        "DealId_x": 12975,
+                        "DealId_y": 12975,
+                        "DealOutcome": "Won",
+                        "Default Delivery Margin Target": 0.1642,
+                        "Delivery Margin Target": 0.1644,
+                        "Delivery Type": "To End Customer - MS Prime",
+                        "DeliveryCostServicesLOC": 78329.55,
+                        "DeliveryCostServicesUSD": 87726.10699999999,
+                        "Derived Primary Domain": "Azure Cloud & AI",
+                        "Derived Primary Domain Short Name": "ACA",
+                        "Domain": "Unknown",
+                        "Domain Count": 1,
+                        "Domain Involvement": "Single Domain",
+                        "DomainAlignedPresalesTotalCnsmdHrs": null,
+                        "ESAP": "ESAP5",
+                        "Engagement to Virtuoso Mapping": "One to one Mapping",
+                        "EngagementID": "23E0080C-97E0-486E-9213-236B77498163",
+                        "Environment Risk Rating": "Low",
+                        "Environment Risk Rating Original": "Low",
+                        "Environment Risk Rating QA": "Unknown",
+                        "Federal": "Exclude USA - Federal",
+                        "Fee": "T&M",
+                        "Fee Arrangement": "Fixed Fee",
+                        "FeeArrangement": "Time & Materials",
+                        "FinalDeliveryValue": null,
+                        "Geography": "Germany (SalesDistrict)",
+                        "Geography Id": 2613,
+                        "GeographyId": 2613,
+                        "HAS SOW": "Non SOW Contract",
+                        "Has CN Review": "No",
+                        "Has Compass Coverage": 1,
+                        "Has ESWO": 0,
+                        "Has Finance Review": "No",
+                        "Has IP Review": "No",
+                        "Has Known Risks": false,
+                        "Has SQA Review": "No",
+                        "HasSContract": "Yes",
+                        "IndustrySector": "Public",
+                        "Is Additional Risk": 0,
+                        "Is Amendment": true,
+                        "Is Budgetary Estimate": false,
+                        "Is Contract Reviewed": "Yes",
+                        "Is Contract Rushed": "Yes",
+                        "Is ECIF": "No",
+                        "Is IP Exchange": 0,
+                        "Is Misstated": false,
+                        "Is One to One Mapping": "Yes",
+                        "Is Public Sector": "Yes",
+                        "Is Risk Overridden": "No",
+                        "Is SAP Aurora": 0,
+                        "Is Strategic Opportunity": false,
+                        "Is Subcon Identified": false,
+                        "Is Vaguely Described": false,
+                        "IsAzureandA&IDomainDeal": "Yes",
+                        "IsGlobal": false,
+                        "IsRenewal": "No",
+                        "IsSapAurora": null,
+                        "MSO TYPE": "No MSO",
+                        "NST Category": "Standard",
+                        "NegotiationsExceedsTarget": "NO",
+                        "ORBApproved": "No",
+                        "OSEDealsFlag": "Deals w/o OSE & no C1 Exception",
+                        "Objective Risk Rating": "Low",
+                        "Opportunity ID": "7-HYBM6CQDN",
+                        "Opportunity Id_x": "7-HYBM6CQDN",
+                        "Opportunity Id_y": "7-HYBM6CQDN",
+                        "OpportunityId_x": null,
+                        "OpportunityId_y": null,
+                        "Organization": "Consulting",
+                        "Outlier Type": "Not an Outlier",
+                        "Output": "L",
+                        "Overall Risk Rating": "Low",
+                        "Overall Risk Rating Original": "Low",
+                        "Overall Risk Rating QA": "Unknown",
+                        "OverallRiskRating-Numeric": 2,
+                        "PL Requested Type": "No PL Requested",
+                        "PM Solution Area": null,
+                        "PPGCategory": "Unknown",
+                        "Payment Terms": "Net 30",
+                        "Planned Contract Microsoft IGD Hours": 0,
+                        "Planned Contract Riskreserve Required CCUS": 0,
+                        "Price To Customer LOC": 0,
+                        "Price To Customer USD": 0,
+                        "Pricing Cut Off": "Approval post Pricing Changes",
+                        "PrimedByDomain": "Azure Cloud & AI",
+                        "Project Id": 5869,
+                        "Project Manager Hours": 0,
+                        "Project Manager Mix": "No project manager",
+                        "Project Risk Rating": "Low",
+                        "Project Risk Rating Original": "Low",
+                        "Project Risk Rating QA": "Unknown",
+                        "Project Status": "Closed",
+                        "ProjectId": 5869,
+                        "ProjectId_x": 5869,
+                        "ProjectId_y": 5869,
+                        "QA_Critical": null,
+                        "QA_Deal_Id": null,
+                        "QA_High": null,
+                        "QA_Low": null,
+                        "QA_Medium": null,
+                        "QA_Unknown": null,
+                        "Red_Cost_PPG": 10.51049273,
+                        "Red_Count_PPG": 4.2253521130000005,
+                        "Red_Projects_SubRegion": 1.565762004,
+                        "Region": "Germany",
+                        "RevenueClusterCRM": null,
+                        "RevenueServicesLOC": 98000,
+                        "RevenueServicesUSD": 109754.7318,
+                        "Risk Profile Rating": 1,
+                        "SBDInvolved": "No",
+                        "SQA Review": "Not Required",
+                        "SSSP Alias": null,
+                        "Seller_Red_Cost": 1.390773461,
+                        "Seller_Red_Projects": 5.263157895,
+                        "SolutionExceedsTarget": "YES",
+                        "Standard Offering Type": "Custom",
+                        "SubContractors": "InfoWAN Datenkommunikation GmbH",
+                        "SubRegion": "Germany",
+                        "Sub_Region": "Germany",
+                        "TQA Review": "Not Required",
+                        "TQA_Critical": null,
+                        "TQA_Deal_Id": null,
+                        "TQA_High": null,
+                        "TQA_Low": null,
+                        "TQA_Medium": null,
+                        "Technical Risk Rating": "Low",
+                        "Technical Risk Rating Original": "Low",
+                        "Technical Risk Rating QA": "Unknown",
+                        "ThresholdMRT": "<MRT",
+                        "TimeZone": "EMEA",
+                        "Total Microsoft Hours": 0,
+                        "Total Resource Hours": 0,
+                        "Total SubCon Hours": 0,
+                        "TotalRevenueServicesUSD": 447854.319395,
+                        "Unnamed: 0": 2,
+                        "VelocityExceedsTarget": "NO",
+                        "Work Order Type": "Custom Work Order (Pre-approved)",
+                        "commitmentlevel": 4,
+                        "dealsizerevenuegroup": "300k-500k",
+                        "dealtypederived": 5,
+                        "domaininvolvement": "Single Domain",
+                        "exceptiontype": "Soft",
+                        "feetype": "T&M",
+                        "forecastrecommendation": "Committed",
+                        "id": 1,
+                        "isdeliverytypeflag": "NO",
+                        "isgpo": "No GPO",
+                        "ismcsopportunity": "No",
+                        "opportunityaginggroup": "More than 180 days",
+                        "opportunityid": "7-HYBM6CQDN",
+                        "opportunitysalesstage": "MS Win 100%",
+                        "opportunitysize": "100k-300k",
+                        "opportunitystatus": "Won"
+                      }
+                    ]
+                  }
+                },
+                "riskRecommender": {
+                  "summary": "Risk recommender example",
+                  "value": {
+                    "type": "Risk Recommender",
+                    "deal_id": "342524",
+                    "data": [
+                      {
+                        "AccountIndustryName": "Banking",
+                        "AccountSegmentName": "Major Commercial",
+                        "Agreement Setup Completed Date Fiscal Year": null,
+                        "ApprovalType": null,
+                        "Area": "Greater China",
+                        "BundledPackageName": null,
+                        "Business Type": "Consulting",
+                        "BusinessScenario": "A&AI_.Net",
+                        "CloudFlag": "Other Deal",
+                        "CommitmentLevel": null,
+                        "ComplexDealIndicator": "NOT COMPLEX",
+                        "Contract Completed Date Fiscal Year": "Unknown",
+                        "Contract Status Group": "In Preparation",
+                        "Contract Version": "Base Contract",
+                        "ContractHyperLink": "https://compassone.microsoft.com/Deal/342524/Customer/419050",
+                        "ContractID": 419050,
+                        "Deal ID": "342524",
+                        "DealId": 342524,
+                        "Domain": "Azure Cloud & AI",
+                        "ECIF": 0,
+                        "Estimated Start Date Fiscal Year": "FY22",
+                        "EstimatedDeliveryValueCCUS": 542950.542,
+                        "EstimatedDeliveryValueLOC": 542950.542,
+                        "EstimatedEndDate": "2022-06-30",
+                        "EstimatedStartDate": "2022-02-14",
+                        "FeeType": "Fixed Fee",
+                        "HASSOW": "Non SOW Contract",
+                        "HasCNReview": "No",
+                        "IsGPO": null,
+                        "IsGlobal": false,
+                        "MSAAggrementType": "Microsoft Business and Services Agreement",
+                        "NSTCategory": "Non-Standard",
+                        "OpportunitySize": null,
+                        "Overall Risk Rating Original": "Unknown",
+                        "PPG": "App Dev",
+                        "Package": "Tailored Consulting",
+                        "PackageId": 10643759,
+                        "PackageTitle": "WS1: Project Governance",
+                        "PaymentTerms": "Net 30",
+                        "PlannedPackageDeliveryCostCCUS": 53473.72159999999,
+                        "PlannedPackageDiscountCCUS": 4266.6208,
+                        "PlannedPackageRevenueCCUS": 35921.6,
+                        "PlannedPackageRevenueLOC": 35921.6,
+                        "PresalesApprovedHours": null,
+                        "PresalesFlag": 0,
+                        "PrimaryProductName": "App Innovation_Azure_Apps",
+                        "Resource": "Account Delivery Executive",
+                        "ResourceCategory": "TZ FTE",
+                        "ResourceHours": 208,
+                        "ResourceType": "Account Delivery Executive",
+                        "SBDInvolved": "No",
+                        "SoldMarginCCUS": -17552.1216,
+                        "StandardOfferingType": "Custom",
+                        "TechnicalRiskRating": "Unknown",
+                        "id": 1
+                      }
+                    ]
+                  }
+                },
+                "nst": {
+                  "summary": "NST example",
+                  "value": {
+                    "type": "NST",
+                    "data": {
+                      "approved": "modification convenience reducing fee",
+                      "NST Type": "Term and Termination",
+                      "NST Group": "Other",
+                      "SubRegion": "United States",
+                      "df_unique_NST_comments": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {},
+                "examples": {
+                  "opty": {
+                    "summary": "Opportunity Propensity example",
+                    "value": {
+                      "received": true,
+                      "score_output": [
+                        {
+                          "Action": [
+                            "There is potential to add/increase ECIF on Deals from Strategic Customers with large Consumption Potential",
+                            "Create and review a Close Plan for this opportunity",
+                            "Consider driving a POC or Sprint0 work with the customer to get the buy-in on the solution",
+                            "Add Consulting actions to the Account Plan in order to drive the right Customer outcomes",
+                            "Create an account plan and link the priority to the opportunity",
+                            "Link a Success Engagement with the Opportunity in order to have the right Consumption plan available in presales"
+                          ],
+                          "Prop_Bucket": "High",
+                          "Won": 0.8033471807568457
+                        }
+                      ]
+                    }
+                  },
+                  "riskAssessment": {
+                    "summary": "Risk Assessment example",
+                    "value": {
+                      "received": true,
+                      "score_output": [
+                        {
+                          "Label": "L",
+                          "Score": 0.4458
+                        }
+                      ]
+                    }
+                  },
+                  "riskRecommender": {
+                    "summary": "Risk recommender example",
+                    "value": {
+                      "received": true,
+                      "score_output": [
+                        {
+                          "Base ContractID": 419050,
+                          "Base DealId": 342524,
+                          "Category": "Technical",
+                          "GRRUID": "Techno19",
+                          "Name": "Performance or Availability Requirements",
+                          "No_of_deals": 1,
+                          "Risk Rating": "Critical",
+                          "Severity": "Critical",
+                          "SubCategory": "Performance"
+                        }
+                      ]
+                    }
+                  },
+                  "nst": {
+                    "summary": "NST example",
+                    "value": {
+                      "received": true,
+                      "score_output": {
+                        "label": "Not Sure",
+                        "score": "[[0.12493289 0.8750671 ]]"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "Types": {
+        "description": "Type of the model",
+        "allOf": [
+          {
+            "type": "string",
+            "description": "The measured skill for hunting",
+            "enum": [
+              "Opportunity Propensity",
+              "Risk Assessment",
+              "Risk Recommender",
+              "NST"
+            ]
+          }
+        ]
+      },
+      "HTTPValidationError": {
+        "title": "HTTPValidationError",
+        "type": "object",
+        "properties": {
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        }
+      },
+      "ValidationError": {
+        "title": "ValidationError",
+        "required": [
+          "msg",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "msg": {
+            "title": "Message",
+            "type": "string"
+          },
+          "type": {
+            "title": "Error Type",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://maipocaa.azurewebsites.net/api",
+      "variables": {}
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

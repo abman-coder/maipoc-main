@@ -1,0 +1,135 @@
+,CI,Column,Value
+0,Civilian Government,# Red Projects,3.110047847
+1,Civilian Government,Cost_Red_Projects,4.608906138
+2,Civilian Government,Custom_perc,99.99999999878112
+3,Civilian Government,Red_Count_PPG,2.753195674
+4,Civilian Government,Red_Cost_PPG,12.10018404
+5,Civilian Government,Seller_Red_Projects,6.382978723
+6,Civilian Government,Seller_Red_Cost,8.077380024
+7,Professional Services,Custom_perc,99.99999999905847
+8,Professional Services,Red_Count_PPG,2.753195674
+9,Professional Services,Red_Cost_PPG,8.498430778
+10,Unknown,Custom_perc,99.99999999962976
+11,Discrete Manufacturing,# Red Projects,4.545454545
+12,Discrete Manufacturing,Cost_Red_Projects,17.34553124
+13,Discrete Manufacturing,Custom_perc,99.99999999912792
+14,Discrete Manufacturing,Red_Count_PPG,2.753195674
+15,Discrete Manufacturing,Red_Cost_PPG,8.780893652
+16,Discrete Manufacturing,Seller_Red_Projects,9.090909091
+17,Discrete Manufacturing,Seller_Red_Cost,19.4097591
+18,"Travel, Tpt, Lgstcs & Hosp",Custom_perc,99.99999999916922
+19,Media & Entertainment,Custom_perc,99.99999999837938
+20,Partner Professional Services,Custom_perc,99.99999999893868
+21,Partner Professional Services,Red_Count_PPG,2.753195674
+22,Partner Professional Services,Red_Cost_PPG,8.498430778
+23,Banking,# Red Projects,3.448275862
+24,Banking,Cost_Red_Projects,6.40009357
+25,Banking,Custom_perc,99.99999999891264
+26,Banking,Red_Count_PPG,2.753195674
+27,Banking,Red_Cost_PPG,8.498430778
+28,Banking,Seller_Red_Projects,6.666666667
+29,Banking,Seller_Red_Cost,5.692403374
+30,Insurance,# Red Projects,3.110047847
+31,Insurance,Cost_Red_Projects,0.526144939
+32,Insurance,Custom_perc,99.99999999886866
+33,Insurance,Red_Count_PPG,2.753195674
+34,Insurance,Red_Cost_PPG,8.780893652
+35,Insurance,Seller_Red_Projects,3.225806452
+36,Insurance,Seller_Red_Cost,0.815837342
+37,Defense,# Red Projects,3.110047847
+38,Defense,Cost_Red_Projects,2.4821747985
+39,Defense,Custom_perc,99.99999999897948
+40,Defense,Red_Count_PPG,2.753195674
+41,Defense,Red_Cost_PPG,12.10018404
+42,Defense,Seller_Red_Projects,5.714285714
+43,Defense,Seller_Red_Cost,5.196947368
+44,Public Safety & Justice,# Red Projects,3.110047847
+45,Public Safety & Justice,Cost_Red_Projects,2.857287254
+46,Public Safety & Justice,Custom_perc,99.99999999812871
+47,Public Safety & Justice,Red_Count_PPG,2.753195674
+48,Public Safety & Justice,Red_Cost_PPG,8.498430778
+49,Public Safety & Justice,Seller_Red_Projects,8.5995085995
+50,Public Safety & Justice,Seller_Red_Cost,8.5753208725
+51,Energy,# Red Projects,5.263157895
+52,Energy,Cost_Red_Projects,6.695512587
+53,Energy,Custom_perc,99.99999999920152
+54,Energy,Red_Count_PPG,2.753195674
+55,Energy,Red_Cost_PPG,8.498430778
+56,Energy,Seller_Red_Projects,5.334281649999999
+57,Energy,Seller_Red_Cost,9.105073057
+58,Retailers,# Red Projects,12.5
+59,Retailers,Cost_Red_Projects,51.45015787
+60,Retailers,Custom_perc,99.99999999906774
+61,Retailers,Red_Count_PPG,2.753195674
+62,Retailers,Red_Cost_PPG,8.498430778
+63,Retailers,Seller_Red_Projects,9.090909091
+64,Retailers,Seller_Red_Cost,19.4097591
+65,Primary & Secondary Edu/K-12,Red_Count_PPG,2.753195674
+66,Primary & Secondary Edu/K-12,Red_Cost_PPG,8.498430778
+67,Process Manufacturing & Agriculture,# Red Projects,5.357142857
+68,Process Manufacturing & Agriculture,Cost_Red_Projects,6.40009357
+69,Process Manufacturing & Agriculture,Custom_perc,99.99999999856776
+70,Process Manufacturing & Agriculture,Seller_Red_Projects,7.5
+71,Process Manufacturing & Agriculture,Seller_Red_Cost,5.445893198
+72,Higher Education,Custom_perc,99.99999999797468
+73,Health Provider,Custom_perc,99.99999999869934
+74,Health Provider,Red_Count_PPG,2.753195674
+75,Health Provider,Red_Cost_PPG,8.498430778
+76,Consumer Goods,Custom_perc,99.99999999865904
+77,Consumer Goods,Red_Count_PPG,2.753195674
+78,Consumer Goods,Red_Cost_PPG,8.780893652
+79,Pharma & Life Sciences,Custom_perc,99.99999999880863
+80,Pharma & Life Sciences,Red_Count_PPG,2.753195674
+81,Pharma & Life Sciences,Red_Cost_PPG,8.780893652
+82,Health Payor,Custom_perc,99.99999999858548
+83,Health Payor,Red_Count_PPG,2.000709025
+84,Health Payor,Red_Cost_PPG,8.639662215
+85,Telecommunications,# Red Projects,10.0
+86,Telecommunications,Cost_Red_Projects,3.646261395
+87,Telecommunications,Custom_perc,99.99999999855817
+88,Telecommunications,Red_Count_PPG,2.753195674
+89,Telecommunications,Red_Cost_PPG,8.498430778
+90,Telecommunications,Seller_Red_Projects,5.555555556
+91,Telecommunications,Seller_Red_Cost,4.6017907
+92,"Automotive, Mobility, Transpt",# Red Projects,3.110047847
+93,"Automotive, Mobility, Transpt",Cost_Red_Projects,22.77126692
+94,"Automotive, Mobility, Transpt",Custom_perc,99.99999999951676
+95,"Automotive, Mobility, Transpt",Red_Count_PPG,2.017291066
+96,"Automotive, Mobility, Transpt",Red_Cost_PPG,8.780893652
+97,"Automotive, Mobility, Transpt",Seller_Red_Projects,7.142857143
+98,"Automotive, Mobility, Transpt",Seller_Red_Cost,9.237658566
+99,Gaming,Red_Count_PPG,3.521126761
+100,Gaming,Red_Cost_PPG,8.498430778
+101,Other Government,# Red Projects,3.110047847
+102,Other Government,Cost_Red_Projects,2.857287254
+103,Other Government,Custom_perc,99.9999999972051
+104,Other Government,Red_Count_PPG,3.01369863
+105,Other Government,Red_Cost_PPG,5.11863591
+106,Other Government,Seller_Red_Projects,5.263157895
+107,Other Government,Seller_Red_Cost,2.442536686
+108,Real Estate,Custom_perc,99.99999999938622
+109,"Tax, Revenue & Finance",Red_Count_PPG,3.020667727
+110,"Tax, Revenue & Finance",Red_Cost_PPG,5.11863591
+111,Critical Infrastructure,# Red Projects,11.11111111
+112,Critical Infrastructure,Cost_Red_Projects,2.857287254
+113,Critical Infrastructure,Custom_perc,99.99999999804996
+114,Critical Infrastructure,Red_Count_PPG,1.984126984
+115,Critical Infrastructure,Red_Cost_PPG,5.11863591
+116,Critical Infrastructure,Seller_Red_Projects,7.692307692
+117,Critical Infrastructure,Seller_Red_Cost,2.131806945
+118,Capital Markets,# Red Projects,3.110047847
+119,Capital Markets,Cost_Red_Projects,47.86781983
+120,Capital Markets,Custom_perc,99.99999999963929
+121,Capital Markets,Red_Count_PPG,2.5023973555000003
+122,Capital Markets,Red_Cost_PPG,3.745500705
+123,Capital Markets,Seller_Red_Projects,8.333333333
+124,Capital Markets,Seller_Red_Cost,9.16732241
+125,Health & Human Services,# Red Projects,8.6978810685
+126,Health & Human Services,Cost_Red_Projects,38.870586157
+127,Health & Human Services,Red_Count_PPG,3.020667727
+128,Health & Human Services,Red_Cost_PPG,5.11863591
+129,Health & Human Services,Seller_Red_Projects,3.846153846
+130,Health & Human Services,Seller_Red_Cost,3.348151518
+131,Power & Utilities,Red_Count_PPG,3.791469194
+132,Power & Utilities,Red_Cost_PPG,3.745500705
+133,Public Finance,Custom_perc,26.04845877515478
