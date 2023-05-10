@@ -1,0 +1,41 @@
+﻿features
+PPG_FeeType
+Has SSSP
+SSSP Ownership
+Total Resources
+Is Global
+PreviousDAcountBucket
+CombinationIteration
+incidentBucket
+Avg_Resource_Experience_Bucket
+GrowthLicensingSpendBucket
+AvgResourceWinRateBucket
+Digital Advisory Curr Flag
+Commercial.Active.Oppty.Count_Bucketted
+MonthsSlipped_Bucketted
+Owner.Win.Rate_Bucketted
+Tpid.Win.Rate_Bucketted
+Is Tpid Active Support Contract
+PrimarySponsorBDM
+ExternalStallingFlag
+ClosePlanExists
+Domain PreSales Indicator
+POC
+StandardOfferingType
+Accountplankey
+MACC_binned
+Cloud_SE
+Consulting.Action
+Cloud_Partner
+AvgCSATScore.Binned
+DBScore_Binned
+binned_disc.is.S500.Flag.ACRPotentialRevenue
+binned_riskreserve_RiskRating_levels_FeeType1
+binned_ecif.is.S500.Flag.ACRPotentialRevenue
+binned_TandM
+binned_Tier.1..Sr.Architect
+binned_Tier.2..Architect
+binned_Tier.3..Sr.PjM.Cons.ADE
+binned_Tier.4..PjM.Cons.ADE
+binned_Tier.5..GD.Subcon
+Amendment_Opportunity_Flag
